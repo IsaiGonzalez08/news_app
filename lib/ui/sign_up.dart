@@ -29,6 +29,9 @@ class _SignUpState extends State<SignUp> {
               ],
             ),
           ),
+          _txtEmail(),
+          _txtPassword(),
+          _txtConfirm(),
         ],
       ),
     );
@@ -107,6 +110,66 @@ class _SignUpState extends State<SignUp> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget _txtEmail(){
+    return Container(
+      margin: EdgeInsets.only(top: 39),
+      child: SizedBox(
+        width: 450.0,
+        height: 45.0,
+        child: TextField(
+          obscureText: false,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            labelText: "Correo electrónico",
+            isDense: true,
+          ),
+        )
+      )
+    );
+  }
+
+    Widget _txtPassword(){
+    return Container(
+      margin: EdgeInsets.only(top: 39),
+      child: SizedBox(
+        width: 450.0,
+        height: 45.0,
+        child: TextField(
+          obscureText: true,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            labelText: "Ingresa contraseña",
+            isDense: true,
+          ),
+        )
+      )
+    );
+  }
+
+    Widget _txtConfirm(){
+    return Container(
+      margin: EdgeInsets.only(top: 39),
+      child: SizedBox(
+        width: 450.0,
+        height: 45.0,
+        child: TextField(
+          obscureText: true,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            labelText: "Confirmar contraseña",
+            isDense: true,
+          ),
+        )
+      )
     );
   }
 }
